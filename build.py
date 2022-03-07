@@ -30,7 +30,7 @@ coaching teams in Ensemble Programming.
 ## I want to update the README
 
 Please do not update this README, instead modify
-enablers.json. If you see some error in these
+`enablers.json`. If you see some error in these
 general instructions, modify `build.py` which
 contain this pre-amble.
 
