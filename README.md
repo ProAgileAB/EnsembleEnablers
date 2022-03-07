@@ -2,7 +2,15 @@
 # Ensemble Enablers - what is this repo?
 
 This repo documents patterns we've found useful while
-coaching teams in Ensemble Programming
+coaching teams in Ensemble Programming.
+
+
+## I want to update the README
+
+Please do not update this README, instead modify
+enablers.json. If you see some error in these
+general instructions, modify `build.py` which
+contain this pre-amble.
 
 
 ## How to add an enabler?
