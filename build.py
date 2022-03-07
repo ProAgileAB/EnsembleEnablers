@@ -19,7 +19,19 @@ def load_enablers():
 
 
 def generate():
-    pass
+    for enabler in load_enablers():
+        name = enabler['name']
+        symptoms = enabler['symptoms']
+        proposal = enabler['proposal']
+        aka = enabler.get('aka', None)
+        print(f"# {name}\n")
+        if aka:
+            print(f"*Also known has: {aka}*\n")
+        print(f"## Symptoms\n")
+        for symptom in symptoms:
+            print(f" * {symptom}")
+        print(f"\n## Proposal\n")
+        print(proposal)
 
 
 if __name__ == '__main__':
