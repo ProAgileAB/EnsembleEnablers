@@ -18,7 +18,27 @@ def load_enablers():
     return json.loads(text)
 
 
+PREAMBLE = """
+# EnsembleEnablers
+
+This repo documents patterns we've found useful while
+coaching teams in Ensemble Programming
+
+
+## How to add an enabler?
+
+Update the enablers.json file, then run this command:
+
+    python build.py
+
+This will update README.md if no obvious errors were
+found in enablers.json.
+
+"""
+
+
 def generate():
+    print(PREAMBLE)
     for enabler in load_enablers():
         name = enabler['name']
         symptoms = enabler['symptoms']

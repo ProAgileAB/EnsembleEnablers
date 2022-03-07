@@ -2,7 +2,7 @@
 Document patterns we've found useful while coaching teams in Ensemble Programming
 
 
-## How to add an enablers?
+## How to add an enabler?
 
 Update the enablers.json file, then run this command:
 
