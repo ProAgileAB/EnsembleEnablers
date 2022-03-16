@@ -3,6 +3,10 @@ import json
 
 from pathlib import Path
 
+# TODO: Migrate JSON proposal field to use this path instead
+def file_path_from_enabler_name(enabler_name):
+    return f"proposals/{enabler_name.lower().replace(' ', '-')}.md"
+
 
 def selftest():
     enablers = load_enablers()
@@ -10,6 +14,7 @@ def selftest():
         assert enabler['name'], "Every enabler has a name"
         assert len(enabler['symptoms']) >= 1, "Every enabler has at least one symptom"
         assert enabler['proposal'], "Every enabler has a proposal"
+    assert 'proposals/connect-first.md' == file_path_from_enabler_name("Connect First")
 
 
 def load_enablers():
@@ -73,5 +78,6 @@ def md_content(enablers):
 
 
 if __name__ == '__main__':
+    print(file_path_from_enabler_name("Connect First"))
     selftest()
     generate()
