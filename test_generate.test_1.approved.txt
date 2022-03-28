@@ -1,51 +1,34 @@
+<h1>Ensemble enablers</h1>
+<ul>
+ <li><a href='#0'>No decisions at the keyboard</a>
+ <li><a href='#1'>Intention-location-details (ILD)</a>
+ <li><a href='#2'>Connect First</a>
+</ul>
+<br>
 
-# Ensemble Enablers - what is this repo?
+<h1 id='#0'>Connect First</h1></a>
 
-This repo documents patterns we've found useful while
-coaching teams in Ensemble Programming.
+<h2>Symptoms</h2>
 
-
-## I want to update the README
-
-Please do not update this README, instead modify
-`enablers.json`. If you see some error in these
-general instructions, modify `build.py` which
-contain this pre-amble.
-
-
-## How to add an enabler?
-
-Update the enablers.json file, then run this command:
-
-    python build.py
-
-This will update README.md if no obvious errors were
-found in enablers.json.
-
-# ENSEMBLE ENABLERS BELOW
-
-# Connect First
-
-## Symptoms
-
- * Ensemble is quiet, no banter
- * Navigator transfer is not smooth, frequently changing direction and focus
- * Conversation seems forced
+ <li>Ensemble is quiet, no banter</li>
+ <li>Navigator transfer is not smooth, frequently changing direction and focus</li>
+ <li>Conversation seems forced</li>
 
 
-## Proposal
+<h2>Proposal</h2>
 
 People work better together when they have a human connection, when they feel they know each other on a personal level as well as professionally. Perhaps someone has had a difficult day, or is stressed about something outside of work. At the beginning of the ensemble session, take a few minutes to ask everyone how they are, and let everyone share something about their day so far. Aim to create an atmosphere where people feel comfortable and behave in a friendly way to one another.
-# Intention-location-details (ILD)
 
-## Symptoms
+<h1 id='#1'>Intention-location-details (ILD)</h1></a>
 
- * Typist is frustrated or inactive. Deleting stuff, scrolling, or writing unexpected code
- * Difficulty when switching navigator - next navigator doesn’t follow what’s happening
- * Ensemble is losing focus (eg checking their phones)
+<h2>Symptoms</h2>
+
+ <li>Typist is frustrated or inactive. Deleting stuff, scrolling, or writing unexpected code</li>
+ <li>Difficulty when switching navigator - next navigator doesn’t follow what’s happening</li>
+ <li>Ensemble is losing focus (eg checking their phones)</li>
 
 
-## Proposal
+<h2>Proposal</h2>
 
 The communication between the navigator and typist is not working well enough, the navigator is not speaking at the correct level for the driver’s current needs.
 
@@ -54,18 +37,19 @@ The communication between the navigator and typist is not working well enough, t
 * *Details*: If the typist still needs more, go into detail. Describe the exact syntax, the types of the variables, where to put the semicolons. Which buttons to press and what keyboard shortcuts to use.
 
 This enabler should help prevent the typist from becoming frustrated. You’re treating them first as an intelligent person who knows a lot about coding, and gradually giving them more as you discover what more details they need right now given the cognitive complexity of the task and their current capacity. It also helps the handover to the next navigator because the intention and purpose is clear and has been spoken to everyone.
-# No decisions at the keyboard
 
-*Also known has: More listening at the keyboard*
+<h1 id='#2'>No decisions at the keyboard</h1></a>
 
-## Symptoms
+<i>Also known has: More listening at the keyboard</i>
 
- * Typist is talking as much or more than the navigator
- * Navigator is quiet or uncertain
- * Typist writes code that the navigator didn’t talk about
+<h2>Symptoms</h2>
+
+ <li>Typist is talking as much or more than the navigator</li>
+ <li>Navigator is quiet or uncertain</li>
+ <li>Typist writes code that the navigator didn’t talk about</li>
 
 
-## Proposal
+<h2>Proposal</h2>
 
 The typist is not supposed to have their own ideas, they should be channeling the ideas from the navigator and the rest of the ensemble into the codebase.
 

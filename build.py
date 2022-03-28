@@ -3,6 +3,7 @@ import json
 
 from pathlib import Path
 
+
 # TODO: Migrate JSON proposal field to use this path instead
 def file_path_from_enabler_name(enabler_name):
     return f"proposals/{enabler_name.lower().replace(' ', '-')}.md"
@@ -20,11 +21,14 @@ def selftest():
 def load_enablers():
     path = ENABLERS_PATH
     text = path.read_text(encoding='utf8')
-    return json.loads(text)
+    list_of_enablers = json.loads(text)
+    list_of_enablers = sorted(list_of_enablers, key=lambda enabler: enabler['name'])
+    return list_of_enablers
 
 
 ENABLERS_PATH = Path('enablers.json')
-OUTPUT_PATH = Path('README.md')
+MD_OUTPUT_PATH = Path('README.md')
+HTML_OUTPUT_PATH = Path('index.html')
 PREAMBLE = """
 # Ensemble Enablers - what is this repo?
 
@@ -54,9 +58,14 @@ found in enablers.json.
 """
 
 
-def generate():
+def generate_md():
     text = md_content(load_enablers())
-    OUTPUT_PATH.write_text(text, encoding='utf8')
+    MD_OUTPUT_PATH.write_text(text, encoding='utf8')
+
+
+def generate_html():
+    text = html_content(load_enablers())
+    HTML_OUTPUT_PATH.write_text(text, encoding='utf8')
 
 
 def md_content(enablers):
@@ -77,7 +86,33 @@ def md_content(enablers):
     return result
 
 
+def html_content(enablers):
+    result = """<h1>Ensemble enablers</h1>
+<ul>
+ <li><a href='#0'>No decisions at the keyboard</a>
+ <li><a href='#1'>Intention-location-details (ILD)</a>
+ <li><a href='#2'>Connect First</a>
+</ul>
+<br>
+"""
+    for ix, enabler in enumerate(enablers):
+        name = enabler['name']
+        symptoms = enabler['symptoms']
+        proposal = enabler['proposal']
+        aka = enabler.get('aka', None)
+        result += f"\n<h1 id='#{ix}'>{name}</h1></a>\n\n"
+        if aka:
+            result += f"<i>Also known has: {aka}</i>\n\n"
+        result += f"<h2>Symptoms</h2>\n\n"
+        for symptom in symptoms:
+            result += f" <li>{symptom}</li>\n"
+        result += f"\n\n<h2>Proposal</h2>\n\n"
+        result += proposal
+    return result
+
+
 if __name__ == '__main__':
     print(file_path_from_enabler_name("Connect First"))
     selftest()
-    generate()
+    generate_md()
+    generate_html()
