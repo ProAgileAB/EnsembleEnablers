@@ -13,8 +13,8 @@ def selftest():
     enablers = load_enablers()
     for enabler in enablers:
         assert enabler['name'], "Every enabler has a name"
-        assert len(enabler['symptoms']) >= 1, "Every enabler has at least one symptom"
-        assert enabler['proposal'], "Every enabler has a proposal"
+        assert len(enabler['symptoms']) >= 0, "Every enabler has a list of symptoms"
+        assert "proposal" in enabler, "Every enabler has a proposal: " + str(enabler)
     assert 'proposals/connect-first.md' == file_path_from_enabler_name("Connect First")
 
 
