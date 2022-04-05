@@ -33,12 +33,12 @@
     "proposal": ""
   },
   {
-    "name": "Kindness, Consideration and Respect",
+    "name": "Kindness, consideration and respect",
     "symptoms": [],
     "proposal": ""
   },
   {
-    "name": "Collaborative Ensemble Timer Setup",
+    "name": "Collaborative ensemble timer setup",
     "symptoms": [],
     "proposal": ""
   },
@@ -83,7 +83,7 @@
     "proposal": ""
   },
   {
-    "name": "I think <name> has a good idea",
+    "name": "I think ABC has a good idea",
     "symptoms": [],
     "proposal": ""
   },
@@ -94,7 +94,7 @@
   },
   {
     "name": "Cross team ensemble",
-    "aka": "Bring own problem, What You Bring Is What You Solve (WYBIWYS)",
+    "aka": "What You Bring Is What You Solve (WYBIWYS)",
     "symptoms": [],
     "proposal": ""
   }

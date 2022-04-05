@@ -32,7 +32,7 @@ found in enablers.json.
 
 ## Proposal
 
-# Collaborative Ensemble Timer Setup
+# Collaborative ensemble timer setup
 
 ## Symptoms
 
@@ -54,7 +54,7 @@ found in enablers.json.
 People work better together when they have a human connection, when they feel they know each other on a personal level as well as professionally. Perhaps someone has had a difficult day, or is stressed about something outside of work. At the beginning of the ensemble session, take a few minutes to ask everyone how they are, and let everyone share something about their day so far. Aim to create an atmosphere where people feel comfortable and behave in a friendly way to one another.
 # Cross team ensemble
 
-*Also known has: Bring own problem, What You Bring Is What You Solve (WYBIWYS)*
+*Also known has: What You Bring Is What You Solve (WYBIWYS)*
 
 ## Symptoms
 
@@ -78,7 +78,7 @@ People work better together when they have a human connection, when they feel th
 
 ## Proposal
 
-# I think <name> has a good idea
+# I think ABC has a good idea
 
 ## Symptoms
 
@@ -112,7 +112,7 @@ This enabler should help prevent the typist from becoming frustrated. You’re t
 
 ## Proposal
 
-# Kindness, Consideration and Respect
+# Kindness, consideration and respect
 
 ## Symptoms
 

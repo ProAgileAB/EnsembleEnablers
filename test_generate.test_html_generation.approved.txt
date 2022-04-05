@@ -1,15 +1,15 @@
 <h1>Ensemble enablers</h1>
 <ul>
  <li><a href='#0'>Bias to action</a>
- <li><a href='#1'>Collaborative Ensemble Timer Setup</a>
+ <li><a href='#1'>Collaborative ensemble timer setup</a>
  <li><a href='#2'>Connect first</a>
  <li><a href='#3'>Cross team ensemble</a>
  <li><a href='#4'>Finger in the air</a>
  <li><a href='#5'>Goal list to commit messages</a>
- <li><a href='#6'>I think <name> has a good idea</a>
+ <li><a href='#6'>I think ABC has a good idea</a>
  <li><a href='#7'>Intention-location-details (ILD)</a>
  <li><a href='#8'>Join at will</a>
- <li><a href='#9'>Kindness, Consideration and Respect</a>
+ <li><a href='#9'>Kindness, consideration and respect</a>
  <li><a href='#10'>No decisions at the keyboard</a>
  <li><a href='#11'>Parallell research</a>
  <li><a href='#12'>Pause the timer</a>
@@ -28,7 +28,7 @@
 <h2>Proposal</h2>
 
 
-<h1 id='1'>Collaborative Ensemble Timer Setup</h1></a>
+<h1 id='1'>Collaborative ensemble timer setup</h1></a>
 
 <h2>Symptoms</h2>
 
@@ -52,7 +52,7 @@ People work better together when they have a human connection, when they feel th
 
 <h1 id='3'>Cross team ensemble</h1></a>
 
-<i>Also known has: Bring own problem, What You Bring Is What You Solve (WYBIWYS)</i>
+<i>Also known has: What You Bring Is What You Solve (WYBIWYS)</i>
 
 <h2>Symptoms</h2>
 
@@ -79,7 +79,7 @@ People work better together when they have a human connection, when they feel th
 <h2>Proposal</h2>
 
 
-<h1 id='6'>I think <name> has a good idea</h1></a>
+<h1 id='6'>I think ABC has a good idea</h1></a>
 
 <h2>Symptoms</h2>
 
@@ -116,7 +116,7 @@ This enabler should help prevent the typist from becoming frustrated. You’re tre
 <h2>Proposal</h2>
 
 
-<h1 id='9'>Kindness, Consideration and Respect</h1></a>
+<h1 id='9'>Kindness, consideration and respect</h1></a>
 
 <h2>Symptoms</h2>
 
