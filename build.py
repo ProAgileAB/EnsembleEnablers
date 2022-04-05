@@ -87,14 +87,12 @@ def md_content(enablers):
 
 
 def html_content(enablers):
-    result = """<h1>Ensemble enablers</h1>
-<ul>
- <li><a href='#0'>No decisions at the keyboard</a>
- <li><a href='#1'>Intention-location-details (ILD)</a>
- <li><a href='#2'>Connect First</a>
-</ul>
-<br>
-"""
+    result = "<h1>Ensemble enablers</h1>\n<ul>\n"
+    for ix, enabler in enumerate(enablers):
+        name = enabler['name']
+        symptoms = enabler['symptoms']
+        result += f" <li><a href='#{ix}'>{name}</a>\n"
+    result += "</ul>\n"
     for ix, enabler in enumerate(enablers):
         name = enabler['name']
         symptoms = enabler['symptoms']
