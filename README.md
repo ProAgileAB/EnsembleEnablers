@@ -60,6 +60,22 @@ People work better together when they have a human connection, when they feel th
 
 ## Proposal
 
+# Goal list to commit messages
+
+## Symptoms
+
+
+
+## Proposal
+
+# I think <name> has a good idea
+
+## Symptoms
+
+
+
+## Proposal
+
 # Intention-location-details (ILD)
 
 ## Symptoms
@@ -78,6 +94,14 @@ The communication between the navigator and typist is not working well enough, t
 * *Details*: If the typist still needs more, go into detail. Describe the exact syntax, the types of the variables, where to put the semicolons. Which buttons to press and what keyboard shortcuts to use.
 
 This enabler should help prevent the typist from becoming frustrated. You’re treating them first as an intelligent person who knows a lot about coding, and gradually giving them more as you discover what more details they need right now given the cognitive complexity of the task and their current capacity. It also helps the handover to the next navigator because the intention and purpose is clear and has been spoken to everyone.
+# Join at will
+
+## Symptoms
+
+
+
+## Proposal
+
 # Kindness, Consideration and Respect
 
 ## Symptoms
@@ -106,3 +130,59 @@ The typist is not supposed to have their own ideas, they should be channeling th
 That’s Llewellyn Falco’s description of “strong-style” pair programming. For an ensemble, this is even more important. Every idea should be spoken: expressed in a form so that it can be discussed and analyzed as it makes its way into the code. The typist has the hardest job here, because they have to break their habit of both thinking and typing themselves. Instead they need to put more effort into listening - in particular to the navigator, and translating their ideas into code.
 
 If you notice the typist is rushing ahead writing code for an idea that hasn’t been discussed, you should probably intervene straight away. Kindly suggest “more listening, less thinking at the keyboard”. Perhaps also bring it up at the retrospective.
+# Parallell research
+
+## Symptoms
+
+
+
+## Proposal
+
+# Pause the timer
+
+## Symptoms
+
+
+
+## Proposal
+
+# Shout out roles
+
+## Symptoms
+
+
+
+## Proposal
+
+# Try both with a timebox
+
+## Symptoms
+
+
+
+## Proposal
+
+# Typist recap
+
+## Symptoms
+
+
+
+## Proposal
+
+# Yes, and...
+
+## Symptoms
+
+
+
+## Proposal
+
+# Yes, and...
+
+## Symptoms
+
+
+
+## Proposal
+
