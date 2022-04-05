@@ -52,6 +52,16 @@ found in enablers.json.
 ## Proposal
 
 People work better together when they have a human connection, when they feel they know each other on a personal level as well as professionally. Perhaps someone has had a difficult day, or is stressed about something outside of work. At the beginning of the ensemble session, take a few minutes to ask everyone how they are, and let everyone share something about their day so far. Aim to create an atmosphere where people feel comfortable and behave in a friendly way to one another.
+# Cross team ensemble
+
+*Also known has: Bring own problem, What You Bring Is What You Solve (WYBIWYS)*
+
+## Symptoms
+
+
+
+## Proposal
+
 # Finger in the air
 
 ## Symptoms
@@ -163,14 +173,6 @@ If you notice the typist is rushing ahead writing code for an idea that hasn’t
 ## Proposal
 
 # Typist recap
-
-## Symptoms
-
-
-
-## Proposal
-
-# Yes, and...
 
 ## Symptoms
 
