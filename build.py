@@ -98,7 +98,7 @@ def html_content(enablers):
         symptoms = enabler['symptoms']
         proposal = enabler['proposal']
         aka = enabler.get('aka', None)
-        result += f"\n<h1 id='#{ix}'>{name}</h1></a>\n\n"
+        result += f"\n<h1 id='{ix}'>{name}</h1></a>\n\n"
         if aka:
             result += f"<i>Also known has: {aka}</i>\n\n"
         result += f"<h2>Symptoms</h2>\n\n"
