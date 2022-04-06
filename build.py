@@ -1,24 +1,41 @@
-# Uses the self-test idiom
 import json
-
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional, List
 
-
-# TODO: Migrate JSON proposal field to use this path instead
 import markdown
 
 
+@dataclass
+class Enabler:
+    name: str
+    also_known_as: Optional[str]
+    symptoms: List[str]
+    proposal: str
+
+    @staticmethod
+    def from_dict(enabler):
+        name = enabler['name']
+        symptoms = enabler['symptoms']
+        proposal = enabler['proposal']
+        aka = enabler.get('aka', None)
+        return Enabler(name, aka, symptoms, proposal)
+
+# TODO: Migrate JSON proposal field to use this path instead
+
+
 def file_path_from_enabler_name(enabler_name):
-    return f"proposals/{enabler_name.lower().replace(' ', '-')}.md"
+    return f"enablers/{enabler_name.lower().replace(' ', '-')}.md"
 
 
-def selftest():
+# Uses the self-test idiom
+def self_test():
     enablers = load_enablers()
     for enabler in enablers:
         assert enabler['name'], "Every enabler has a name"
         assert len(enabler['symptoms']) >= 0, "Every enabler has a list of symptoms"
         assert "proposal" in enabler, "Every enabler has a proposal: " + str(enabler)
-    assert 'proposals/connect-first.md' == file_path_from_enabler_name("Connect First")
+    assert 'enablers/connect-first.md' == file_path_from_enabler_name("Connect First")
 
 
 def load_enablers():
@@ -73,19 +90,15 @@ def generate_html():
 
 def md_content(enablers):
     result = PREAMBLE
-    for enabler in enablers:
-        name = enabler['name']
-        symptoms = enabler['symptoms']
-        proposal = enabler['proposal']
-        aka = enabler.get('aka', None)
-        result += f"# {name}\n\n"
-        if aka:
-            result += f"*Also known has: {aka}*\n\n"
+    for e in map(Enabler.from_dict, enablers):
+        result += f"# {e.name}\n\n"
+        if e.also_known_as:
+            result += f"*Also known has: {e.also_known_as}*\n\n"
         result += f"## Symptoms\n\n"
-        for symptom in symptoms:
+        for symptom in e.symptoms:
             result += f" * {symptom}\n"
         result += f"\n\n## Proposal\n\n"
-        result += proposal
+        result += e.proposal
     return result
 
 
@@ -114,6 +127,6 @@ def html_content(enablers):
 
 if __name__ == '__main__':
     print(file_path_from_enabler_name("Connect First"))
-    selftest()
+    self_test()
     generate_md()
     generate_html()
