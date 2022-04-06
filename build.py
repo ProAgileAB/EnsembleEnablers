@@ -1,6 +1,7 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
+from pprint import pprint
 from typing import Optional, List
 
 import markdown
@@ -122,23 +123,13 @@ def html_content(enablers):
 
 
 def enabler_as_html(ix, enabler):
-    buf = f"\n<h1 id='{ix}'>{enabler.name}</h1></a>\n\n"
     header = f"\n<h1 id='{ix}'>{enabler.name}</h1></a>\n\n"
-    also_known_as = ''
-    if enabler.also_known_as:
-        also_known_as = f"<i>Also known has: {enabler.also_known_as}</i>\n\n"
-        buf += f"<i>Also known has: {enabler.also_known_as}</i>\n\n"
-    buf += f"<h2>Symptoms</h2>\n\n"
+    also_known_as = f"<i>Also known has: {enabler.also_known_as}</i>\n\n" if enabler.also_known_as else ''
     symptom_header = f"<h2>Symptoms</h2>\n\n"
-    for symptom in enabler.symptoms:
-        buf += f" <li>{symptom}</li>\n"
-    symptoms = '\n'.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms) + '\n'
-    buf += f"\n\n<h2>Proposal</h2>\n\n"
+    symptoms = ''.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms)
     proposal_header = f"\n\n<h2>Proposal</h2>\n\n"
     proposal = markdown.markdown(enabler.proposal)
-    proposal_html = markdown.markdown(enabler.proposal)
-    buf += proposal
-    return buf
+    return header + also_known_as + symptom_header + symptoms + proposal_header + proposal
 
 
 if __name__ == '__main__':
