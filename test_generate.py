@@ -1,7 +1,7 @@
 from approvaltests import verify, Options
 from approvaltests.reporters import GenericDiffReporterFactory
 
-from build import html_content
+from generate_html import html_content
 from enabler import load_enablers
 
 

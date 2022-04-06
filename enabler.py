@@ -41,3 +41,12 @@ def format_enablers(enablers, formatter):
 
 
 ENABLERS_PATH = Path('enablers/enablers.json')
+
+
+def enabler_self_test():
+    enablers = load_enablers()
+    for enabler in enablers:
+        assert enabler['name'], "Every enabler has a name"
+        assert len(enabler['symptoms']) >= 0, "Every enabler has a list of symptoms"
+        assert "proposal" in enabler, "Every enabler has a proposal: " + str(enabler)
+    assert 'enablers/connect-first.md' == file_path_from_enabler_name("Connect First")

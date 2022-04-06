@@ -9,7 +9,7 @@ coaching teams in Ensemble Programming.
 
 Please do not update this README, instead modify
 `enablers.json`. If you see some error in these
-general instructions, modify `build.py` which
+general instructions, modify `main.py` which
 contain this pre-amble.
 
 
@@ -17,7 +17,7 @@ contain this pre-amble.
 
 Update the enablers.json file, then run this command:
 
-    python build.py
+    python main.py
 
 This will update README.md if no obvious errors were
 found in enablers.json.
