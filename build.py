@@ -5,13 +5,15 @@ from typing import Optional, List
 
 import markdown
 
+md = str
+
 
 @dataclass
 class Enabler:
     name: str
     also_known_as: Optional[str]
     symptoms: List[str]
-    proposal: str
+    proposal: md
 
     @staticmethod
     def from_dict(enabler):
@@ -20,6 +22,7 @@ class Enabler:
         proposal = enabler['proposal']
         aka = enabler.get('aka', None)
         return Enabler(name, aka, symptoms, proposal)
+
 
 # TODO: Migrate JSON proposal field to use this path instead
 
@@ -89,40 +92,53 @@ def generate_html():
 
 
 def md_content(enablers):
-    result = PREAMBLE
-    for e in map(Enabler.from_dict, enablers):
-        result += f"# {e.name}\n\n"
-        if e.also_known_as:
-            result += f"*Also known has: {e.also_known_as}*\n\n"
-        result += f"## Symptoms\n\n"
-        for symptom in e.symptoms:
-            result += f" * {symptom}\n"
-        result += f"\n\n## Proposal\n\n"
-        result += e.proposal
-    return result
+    return PREAMBLE + format_enablers(enablers, enabler_as_markdown)
+
+
+def enabler_as_markdown(_, e):
+    md_string = f"# {e.name}\n\n"
+    if e.also_known_as:
+        md_string += f"*Also known has: {e.also_known_as}*\n\n"
+    md_string += f"## Symptoms\n\n"
+    for symptom in e.symptoms:
+        md_string += f" * {symptom}\n"
+    md_string += f"\n\n## Proposal\n\n"
+    md_string += e.proposal
+    return md_string
+
+
+def format_enablers(enablers, formatter):
+    return ''.join(formatter(ix, Enabler.from_dict(enabler))
+                   for (ix, enabler) in enumerate(enablers))
 
 
 def html_content(enablers):
     result = "<h1>Ensemble enablers</h1>\n<ul>\n"
-    for ix, enabler in enumerate(enablers):
-        name = enabler['name']
-        result += f" <li><a href='#{ix}'>{name}</a>\n"
+    result += format_enablers(enablers,
+                              lambda ix, e: f" <li><a href='#{ix}'>{e.name}</a>\n")
     result += "</ul>\n"
-    for ix, enabler in enumerate(enablers):
-        name = enabler['name']
-        symptoms = enabler['symptoms']
-        proposal = enabler['proposal']
-        proposal = markdown.markdown(proposal)
-        aka = enabler.get('aka', None)
-        result += f"\n<h1 id='{ix}'>{name}</h1></a>\n\n"
-        if aka:
-            result += f"<i>Also known has: {aka}</i>\n\n"
-        result += f"<h2>Symptoms</h2>\n\n"
-        for symptom in symptoms:
-            result += f" <li>{symptom}</li>\n"
-        result += f"\n\n<h2>Proposal</h2>\n\n"
-        result += proposal
+    result += format_enablers(enablers, enabler_as_html)
     return result
+
+
+def enabler_as_html(ix, enabler):
+    buf = f"\n<h1 id='{ix}'>{enabler.name}</h1></a>\n\n"
+    header = f"\n<h1 id='{ix}'>{enabler.name}</h1></a>\n\n"
+    also_known_as = ''
+    if enabler.also_known_as:
+        also_known_as = f"<i>Also known has: {enabler.also_known_as}</i>\n\n"
+        buf += f"<i>Also known has: {enabler.also_known_as}</i>\n\n"
+    buf += f"<h2>Symptoms</h2>\n\n"
+    symptom_header = f"<h2>Symptoms</h2>\n\n"
+    for symptom in enabler.symptoms:
+        buf += f" <li>{symptom}</li>\n"
+    symptoms = '\n'.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms) + '\n'
+    buf += f"\n\n<h2>Proposal</h2>\n\n"
+    proposal_header = f"\n\n<h2>Proposal</h2>\n\n"
+    proposal = markdown.markdown(enabler.proposal)
+    proposal_html = markdown.markdown(enabler.proposal)
+    buf += proposal
+    return buf
 
 
 if __name__ == '__main__':
