@@ -125,11 +125,9 @@ def html_content(enablers):
 def enabler_as_html(ix, enabler):
     header = f"\n<h1 id='{ix}'>{enabler.name}</h1></a>\n\n"
     also_known_as = f"<i>Also known has: {enabler.also_known_as}</i>\n\n" if enabler.also_known_as else ''
-    symptom_header = f"<h2>Symptoms</h2>\n\n"
-    symptoms = ''.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms)
-    proposal_header = f"\n\n<h2>Proposal</h2>\n\n"
-    proposal = markdown.markdown(enabler.proposal)
-    return header + also_known_as + symptom_header + symptoms + proposal_header + proposal
+    proposal = f"\n\n<h2>Proposal</h2>\n\n" + markdown.markdown(enabler.proposal)
+    symptoms = f"<h2>Symptoms</h2>\n\n" + ''.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms)
+    return header + also_known_as + symptoms + proposal
 
 
 if __name__ == '__main__':
