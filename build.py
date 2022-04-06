@@ -5,6 +5,9 @@ from pathlib import Path
 
 
 # TODO: Migrate JSON proposal field to use this path instead
+import markdown
+
+
 def file_path_from_enabler_name(enabler_name):
     return f"proposals/{enabler_name.lower().replace(' ', '-')}.md"
 
@@ -90,13 +93,13 @@ def html_content(enablers):
     result = "<h1>Ensemble enablers</h1>\n<ul>\n"
     for ix, enabler in enumerate(enablers):
         name = enabler['name']
-        symptoms = enabler['symptoms']
         result += f" <li><a href='#{ix}'>{name}</a>\n"
     result += "</ul>\n"
     for ix, enabler in enumerate(enablers):
         name = enabler['name']
         symptoms = enabler['symptoms']
         proposal = enabler['proposal']
+        proposal = markdown.markdown(proposal)
         aka = enabler.get('aka', None)
         result += f"\n<h1 id='{ix}'>{name}</h1></a>\n\n"
         if aka:
