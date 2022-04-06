@@ -29,7 +29,7 @@ def load_enablers():
     return list_of_enablers
 
 
-ENABLERS_PATH = Path('enablers.json')
+ENABLERS_PATH = Path('enablers/enablers.json')
 MD_OUTPUT_PATH = Path('README.md')
 HTML_OUTPUT_PATH = Path('index.html')
 PREAMBLE = """
