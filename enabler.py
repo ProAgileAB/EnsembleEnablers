@@ -32,6 +32,10 @@ def load_enablers():
     text = path.read_text(encoding='utf8')
     list_of_enablers = json.loads(text)
     list_of_enablers = sorted(list_of_enablers, key=lambda enabler: enabler['name'])
+    # for enabler in list_of_enablers:
+    #     proposal_path = Path(file_path_from_enabler_name(enabler['name']))
+    #     if proposal_path.exists():
+    #         enabler['proposal'] = proposal_path.read_text(encoding='utf8')
     return list_of_enablers
 
 
