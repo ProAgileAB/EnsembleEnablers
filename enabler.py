@@ -9,6 +9,7 @@ md = str
 @dataclass
 class Enabler:
     name: str
+    identifier: str
     also_known_as: Optional[str]
     symptoms: List[str]
     proposal: md
@@ -16,10 +17,11 @@ class Enabler:
     @staticmethod
     def from_dict(enabler):
         name = enabler['name']
+        identifier = id_from_name(name)
         symptoms = enabler['symptoms']
         proposal = enabler['proposal']
         aka = enabler.get('aka', None)
-        return Enabler(name, aka, symptoms, proposal)
+        return Enabler(name, identifier, aka, symptoms, proposal)
 
 
 def load_enablers():
