@@ -5,7 +5,7 @@ This repo documents patterns we've found useful while
 coaching teams in Ensemble Programming. The enablers
 are found here:
 
-    https://proagileab.github.io/EnsembleEnablers/
+https://proagileab.github.io/EnsembleEnablers/
 
 
 ## How do I add an enabler?
