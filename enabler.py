@@ -10,7 +10,6 @@ md = str
 class Enabler:
     name: str
     also_known_as: Optional[str]
-
     symptoms: List[str]
     proposal: md
 
@@ -21,10 +20,6 @@ class Enabler:
         proposal = enabler['proposal']
         aka = enabler.get('aka', None)
         return Enabler(name, aka, symptoms, proposal)
-
-
-def file_path_from_enabler_name(enabler_name):
-    return f"data/{enabler_name.lower().replace(' ', '-')}.md"
 
 
 def load_enablers():
@@ -44,7 +39,12 @@ def format_enablers(enablers, formatter):
                    for (ix, enabler) in enumerate(enablers))
 
 
-ENABLERS_PATH = Path('data/enablers.json')
+def file_path_from_enabler_name(enabler_name):
+    return f"data/{id_from_name(enabler_name)}.md"
+
+
+def id_from_name(enabler_name):
+    return enabler_name.lower().replace(' ', '-')
 
 
 def enabler_self_test():
@@ -53,4 +53,8 @@ def enabler_self_test():
         assert enabler['name'], "Every enabler has a name"
         assert len(enabler['symptoms']) >= 0, "Every enabler has a list of symptoms"
         assert "proposal" in enabler, "Every enabler has a proposal: " + str(enabler)
-    assert 'data/connect-first.md' == file_path_from_enabler_name("Connect First")
+    assert 'data/connect-first.md' == file_path_from_enabler_name("Connect first")
+    assert 'connect-first' == id_from_name("Connect first")
+
+
+ENABLERS_PATH = Path('data/enablers.json')
