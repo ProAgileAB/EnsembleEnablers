@@ -104,6 +104,17 @@ The communication between the navigator and typist is not working well enough, t
 * *Details*: If the typist still needs more, go into detail. Describe the exact syntax, the types of the variables, where to put the semicolons. Which buttons to press and what keyboard shortcuts to use.
 
 This enabler should help prevent the typist from becoming frustrated. You're treating them first as an intelligent person who knows a lot about coding, and gradually giving them more as you discover what more details they need right now given the cognitive complexity of the task and their current capacity. It also helps the handover to the next navigator because the intention and purpose is clear and has been spoken to everyone.
+# Invite an expert
+
+## Symptoms
+
+ * The team keeps referring to another team (or member of another team)
+ * Parallell research has been tried several times and not much progress made
+ * Team is struggling with making progress due to lack of experience
+
+
+## Proposal
+
 # Join at will
 
 ## Symptoms
