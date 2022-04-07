@@ -15,7 +15,7 @@ HTML_OUTPUT_PATH = Path('index.html')
 
 def enabler_as_html(ix, enabler):
     header = f"\n<h1 id='{ix}'>{enabler.name}</h1></a>\n\n"
-    also_known_as = f"<i>Also known has: {enabler.also_known_as}</i>\n\n" if enabler.also_known_as else ''
+    also_known_as = f"<i>Also known as: {enabler.also_known_as}</i>\n\n" if enabler.also_known_as else ''
     proposal = f"\n\n<h2>Proposal</h2>\n\n" + markdown.markdown(enabler.proposal)
     symptoms = f"<h2>Symptoms</h2>\n\n" + ''.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms)
     return header + also_known_as + symptoms + proposal
