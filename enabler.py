@@ -30,8 +30,9 @@ def load_enablers():
     raw_list = json.loads(text)
     for enabler in raw_list:
         proposal_path = Path(file_path_from_enabler_name(enabler['name']))
-        print(proposal_path)
+        print(f"Looking for {proposal_path}... ")
         if proposal_path.exists():
+            print("\tFound it - using instead of field.")
             enabler['proposal'] = proposal_path.read_text(encoding='utf8')
     enabler_dto_list = [Enabler.from_dict(enabler) for enabler in raw_list]
     sorted_enablers = sorted(enabler_dto_list, key=lambda enabler: enabler.name)
