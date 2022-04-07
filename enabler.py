@@ -25,14 +25,14 @@ class Enabler:
 def load_enablers():
     path = ENABLERS_PATH
     text = path.read_text(encoding='utf8')
-    list_of_enablers = json.loads(text)
-    list_of_enablers = sorted(list_of_enablers, key=lambda enabler: enabler['name'])
-    list_of_enablers = [Enabler.from_dict(enabler) for enabler in list_of_enablers]
+    raw_list = json.loads(text)
+    enabler_dto_list = [Enabler.from_dict(enabler) for enabler in raw_list]
+    sorted_enablers = sorted(enabler_dto_list, key=lambda enabler: enabler.name)
     # for enabler in list_of_enablers:
     #     proposal_path = Path(file_path_from_enabler_name(enabler['name']))
     #     if proposal_path.exists():
     #         enabler['proposal'] = proposal_path.read_text(encoding='utf8')
-    return list_of_enablers
+    return sorted_enablers
 
 
 def format_enablers(enablers, formatter):
