@@ -27,6 +27,7 @@ def load_enablers():
     text = path.read_text(encoding='utf8')
     list_of_enablers = json.loads(text)
     list_of_enablers = sorted(list_of_enablers, key=lambda enabler: enabler['name'])
+    list_of_enablers = [Enabler.from_dict(enabler) for enabler in list_of_enablers]
     # for enabler in list_of_enablers:
     #     proposal_path = Path(file_path_from_enabler_name(enabler['name']))
     #     if proposal_path.exists():
@@ -35,7 +36,7 @@ def load_enablers():
 
 
 def format_enablers(enablers, formatter):
-    return ''.join(formatter(ix, Enabler.from_dict(enabler))
+    return ''.join(formatter(ix, enabler)
                    for (ix, enabler) in enumerate(enablers))
 
 
@@ -47,12 +48,7 @@ def id_from_name(enabler_name):
     return enabler_name.lower().replace(' ', '-')
 
 
-def enabler_self_test():
-    enablers = load_enablers()
-    for enabler in enablers:
-        assert enabler['name'], "Every enabler has a name"
-        assert len(enabler['symptoms']) >= 0, "Every enabler has a list of symptoms"
-        assert "proposal" in enabler, "Every enabler has a proposal: " + str(enabler)
+def enabler_self_tests():
     assert 'data/connect-first.md' == file_path_from_enabler_name("Connect first")
     assert 'connect-first' == id_from_name("Connect first")
 
