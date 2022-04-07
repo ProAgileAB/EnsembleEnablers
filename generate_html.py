@@ -12,14 +12,13 @@ def generate_html():
 
 def html_content(enablers):
     result = "<h1>Ensemble enablers</h1>\n<ul>\n"
-    result += format_enablers(enablers,
-                              lambda ix, e: f" <li><a href='#{e.identifier}'>{e.name}</a>\n")
+    result += format_enablers(enablers, lambda e: f" <li><a href='#{e.identifier}'>{e.name}</a>\n")
     result += "</ul>\n"
     result += format_enablers(enablers, enabler_as_html)
     return result
 
 
-def enabler_as_html(ix, enabler):
+def enabler_as_html(enabler):
     header = f"\n<h1 id='{enabler.identifier}'>{enabler.name}</h1></a>\n\n"
     also_known_as = f"<i>Also known as: {enabler.also_known_as}</i>\n\n" if enabler.also_known_as else ''
     proposal = f"\n\n<h2>Proposal</h2>\n\n" + markdown.markdown(enabler.proposal)

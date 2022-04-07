@@ -38,8 +38,7 @@ def load_enablers():
 
 
 def format_enablers(enablers, formatter):
-    return ''.join(formatter(ix, enabler)
-                   for (ix, enabler) in enumerate(enablers))
+    return ''.join(formatter(enabler) for enabler in enablers)
 
 
 def file_path_from_enabler_name(enabler_name):
