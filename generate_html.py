@@ -10,7 +10,13 @@ def generate_html():
     HTML_OUTPUT_PATH.write_text(text, encoding='utf8')
 
 
-HTML_OUTPUT_PATH = Path('index.html')
+def html_content(enablers):
+    result = "<h1>Ensemble enablers</h1>\n<ul>\n"
+    result += format_enablers(enablers,
+                              lambda ix, e: f" <li><a href='#{ix}'>{e.name}</a>\n")
+    result += "</ul>\n"
+    result += format_enablers(enablers, enabler_as_html)
+    return result
 
 
 def enabler_as_html(ix, enabler):
@@ -21,10 +27,4 @@ def enabler_as_html(ix, enabler):
     return header + also_known_as + symptoms + proposal
 
 
-def html_content(enablers):
-    result = "<h1>Ensemble enablers</h1>\n<ul>\n"
-    result += format_enablers(enablers,
-                              lambda ix, e: f" <li><a href='#{ix}'>{e.name}</a>\n")
-    result += "</ul>\n"
-    result += format_enablers(enablers, enabler_as_html)
-    return result
+HTML_OUTPUT_PATH = Path('index.html')
