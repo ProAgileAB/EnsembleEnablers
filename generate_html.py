@@ -10,9 +10,16 @@ def generate_html():
     HTML_OUTPUT_PATH.write_text(text, encoding='utf8')
 
 
+def enabler_li(e):
+    title = f"{e.name}"
+    if e.proposal:
+        title = f"<b>{title}</b>"
+    return f" <li><a href='#{e.identifier}'>{title}</a>\n"
+
+
 def html_content(enablers):
     result = "<h1>Ensemble enablers</h1>\n<ul>\n"
-    result += format_enablers(enablers, lambda e: f" <li><a href='#{e.identifier}'>{e.name}</a>\n")
+    result += format_enablers(enablers, enabler_li)
     result += "</ul>\n"
     result += format_enablers(enablers, enabler_as_html)
     return result
