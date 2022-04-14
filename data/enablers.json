@@ -78,8 +78,11 @@
   },
   {
     "name": "Shout out roles",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "When the navigator rotates, they are unprepared (comes as a surprise)",
+      "Someone notices the timer ran out some time ago and we forgot to rotate",
+      "Little engagement, people are losing focus and attention"
+    ]
   },
   {
     "name": "Join at will",
