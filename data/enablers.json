@@ -26,8 +26,11 @@
   },
   {
     "name": "Finger in the air",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "Navigator is interrupted by rest of ensemble",
+      "Typist does not know who to listen to",
+      "“Flow” is not happening"
+    ]
   },
   {
     "name": "Kindness, consideration and respect",
