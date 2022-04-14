@@ -86,8 +86,12 @@
   },
   {
     "name": "Join at will",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "People seem stressed, particularly when they take over the navigator role",
+      "There is a new or shy member of the team, that hasn't done any ensemble programming before",
+      "Someone missed the previous session and asks to skip navigation when it’s their turn",
+      "People you expected to be there don’t turn up to the session at all"
+    ]
   },
   {
     "name": "Goal list to commit messages",
