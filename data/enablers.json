@@ -81,8 +81,11 @@
   },
   {
     "name": "Pause the timer",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "One or two people are dominating",
+      "Dissenting opinions and ideas are being ignored, or override each other",
+      "A suggestion is repeatedly raised without ever being discussed properly"
+    ]
   },
   {
     "name": "Shout out roles",
