@@ -49,7 +49,7 @@
     "name": "Bias to action",
     "symptoms": [
       "Discussions go on for more than (say) 20 minutes without code being written",
-      "Every time the navigator makes a design decision, someone else wants to correct or improve something about it before they have got any code written",
+      "Every time the navigator makes a design decision, someone else wants to correct or improve something about it before they have get any code written",
       "Team is stuck in 'analysis-paralysis' with a lot of speculation on which approach to take"
     ]
   },
