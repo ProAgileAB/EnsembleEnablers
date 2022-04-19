@@ -55,8 +55,11 @@
   },
   {
     "name": "Parallell research",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "Nobody in the team knows the details of how to do something well enough to explain it to the typist",
+      "The team is working with an unfamiliar programming language or framework and just gets stuck",
+      "The codebase is huge and no-one in the team is knowledgeable about where to make changes for current user story"
+    ]
   },
   {
     "name": "Invite an expert",
