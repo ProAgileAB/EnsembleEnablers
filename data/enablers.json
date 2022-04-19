@@ -39,8 +39,11 @@
   },
   {
     "name": "Collaborative ensemble timer setup",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "Discover someone is missing from the rotations",
+      "Discover someone is absent from the meeting but present in the timer",
+      "Realize the timer has not alerted you to rotate as often as you expected"
+    ]
   },
   {
     "name": "Bias to action",

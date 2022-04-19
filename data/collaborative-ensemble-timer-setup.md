@@ -1,0 +1,1 @@
+Before starting rotations, have everyone in the ensemble help to configure it. This means more eyes on the problem, errors (who's in the ensemble today? How many minute rotations? Is the audible bell setup?) is fixed quickly instead of interrupting flow later.
