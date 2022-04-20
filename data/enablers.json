@@ -71,8 +71,11 @@
   },
   {
     "name": "Typist recap",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "When the navigator rotates, the next navigator has trouble picking up the direction",
+      "Lots of discussion, not much progress",
+      "Each navigator seems to take a different direction from the previous one"
+    ]
   },
   {
     "name": "Try both with a timebox",
