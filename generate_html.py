@@ -4,9 +4,20 @@ import markdown
 
 from enabler import load_enablers, format_enablers
 
+HTML_PAGE = """<!doctype html>
+<html lang="en">
+<head>
+    <title>Ensemble Enablers</title>
+</head>
+<body>
+%s
+</body>
+</html>"""
+
 
 def generate_html():
-    text = html_content(load_enablers())
+    body_content = html_content(load_enablers())
+    text = HTML_PAGE % (body_content)
     HTML_OUTPUT_PATH.write_text(text, encoding='utf8')
 
 
