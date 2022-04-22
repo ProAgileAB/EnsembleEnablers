@@ -1,4 +1,4 @@
-We’re interested in the best ideas making it into the code, so if people have ideas that are being ignored, there’s a danger we’ll miss something important, or hinder the team from growing in collaboration.
+We're interested in the best ideas making it into the code, so if people have ideas that are being ignored, there's a danger we'll miss something important, or hinder the team from growing in collaboration.
 
 It may help the team to listen to all voices if you pause the timer and ask them to discuss the idea or proposal you feel they have not paid attention to, and why it helps to collaborate and work on the problem together.
 
