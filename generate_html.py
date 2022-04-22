@@ -8,6 +8,7 @@ HTML_PAGE = """<!doctype html>
 <html lang="en">
 <head>
     <title>Ensemble Enablers</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
 </head>
 <body>
 %s
