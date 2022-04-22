@@ -40,7 +40,8 @@ def enabler_as_html(enabler):
     header = f"\n<h1 id='{enabler.identifier}'>{enabler.name}</h1></a>\n\n"
     also_known_as = f"<i>Also known as: {enabler.also_known_as}</i>\n\n" if enabler.also_known_as else ''
     proposal = f"\n\n<h2>Proposal</h2>\n\n" + markdown.markdown(enabler.proposal)
-    symptoms = f"<h2>Symptoms</h2>\n\n" + ''.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms)
+    symptoms_list_items = ''.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms)
+    symptoms = f"<h2>Symptoms</h2>\n\n<ul>\n{symptoms_list_items}</ul>"
     return header + also_known_as + symptoms + proposal
 
 
