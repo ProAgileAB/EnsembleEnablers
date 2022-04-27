@@ -9,6 +9,20 @@ HTML_PAGE = """<!doctype html>
 <head>
     <title>Ensemble Enablers</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <style>
+    body {
+        background-color: lightblue;
+        border-radius: 10px;
+        border-style: 
+    }
+    .enabler {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid gray;
+        border-radius: 20px 50px;
+      }
+    </style>
 </head>
 <body>
 %s
