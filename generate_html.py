@@ -43,7 +43,7 @@ def enabler_as_html(enabler):
     proposal = f"\n\n<h2>Proposal</h2>\n\n" + markdown.markdown(enabler.proposal)
     symptoms_list_items = ''.join(f" <li>{symptom}</li>\n" for symptom in enabler.symptoms)
     symptoms = f"<h2>Symptoms</h2>\n\n<ul>\n{symptoms_list_items}</ul>"
-    return header + also_known_as + symptoms + proposal
+    return "<div class='enabler'>\n" + header + also_known_as + symptoms + proposal + "\n</div>\n\n"
 
 
 HTML_OUTPUT_PATH = Path('index.html')
