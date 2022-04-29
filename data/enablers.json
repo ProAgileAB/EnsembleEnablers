@@ -34,8 +34,12 @@
   },
   {
     "name": "Kindness, consideration and respect",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "Conflict",
+      "Big egos getting in the way, little code being written",
+      "Not listening to one another"
+    ],
+    "proposal": "This is a basic, fundamental ground rule for this way of working:\n\nWe treat everyone with kindness, consideration and respect\n\nEven if you've had a rough day, or you find someone annoying, or there are several other\nthings you'd rather be doing, you have to stick to a basic level of decency towards the\npeople you are working with. If you feel someone is out of order, remind them gently that this\nis how they agreed to behave in the ensemble. Suggest they could take a break if they need\nto and come back when they're ready to do that."
   },
   {
     "name": "Collaborative ensemble timer setup",
@@ -103,8 +107,8 @@
     "symptoms": [
       "People seem stressed, particularly when they take over the navigator role",
       "There is a new or shy member of the team, that hasn't done any ensemble programming before",
-      "Someone missed the previous session and asks to skip navigation when it’s their turn",
-      "People you expected to be there don’t turn up to the session at all"
+      "Someone missed the previous session and asks to skip navigation when it's their turn",
+      "People you expected to be there don't turn up to the session at all"
     ]
   },
   {
