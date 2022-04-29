@@ -29,7 +29,7 @@
     "symptoms": [
       "Navigator is interrupted by rest of ensemble",
       "Typist does not know who to listen to",
-      "“Flow” is not happening"
+      "\"Flow\" is not happening"
     ]
   },
   {
@@ -83,8 +83,11 @@
   },
   {
     "name": "Try both with a timebox",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "Despite (say) 20 minutes of discussion, the team is not agreed on an approach",
+      "Two or more people are trying to persuade the ensemble that their design approach is the right one"
+    ],
+    "proposal": "As a coach it might be tempting to just tell them which approach is best and to get on with it.\nThat's pretty arrogant and clearly not a long-term solution! Woody Zuill has a general rule\nthat you should \"try both\" or \"try everything\", but with the proviso that you set a time limit for\neach one. Make sure you have a commit you can return to easily, then begin coding one of\nthe suggestions. Stash or revert the code when the time is up, and instead begin coding the\nnext suggestion. When all options have been looked at, the team decides which one to\npursue."
   },
   {
     "name": "Pause the timer",
@@ -113,13 +116,21 @@
   },
   {
     "name": "Goal list to commit messages",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "Infrequent commits",
+      "Difficulty composing good commit messages",
+      "The goal list is out of sync with what you're working on"
+    ],
+    "proposal": "When you work in an ensemble you often have a shared goal list written in a README file in\nthe repo. (You might call it a test list or a todo list.) Whenever the tests are green, or in fact\nwhenever you think you've made progress towards something on the list, you should\nconsider making a commit in VCS. In many cases you can base your commit message on\nthe goal list item you're currently working on. If you can't use this text in your commit\nmessage then that could be useful feedback to you that your goal list items are not reflecting\nwhat you're actually working on. Take the chance to review your list and update it."
   },
   {
     "name": "I think Sue has a good idea",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "Someone mentions a new idea that nobody picks up on at the time",
+      "Someone is generally quiet and used to being overlooked",
+      "You know someone has specialist knowledge about the current issue, but they arenot speaking"
+    ],
+    "proposal": "We're interested in the best ideas making it into the code. If someone has mentioned\nsomething that could be useful, but perhaps they said it too quietly or at an inopportune\nmoment, take the chance to encourage them to speak again at a better time, in a louder\nvoice.\n\nIt should be as simple as asking them to repeat what they said, or to share their thoughts\nabout a particular issue. Give them your support and encouragement, don't just take over\ntheir idea and say it yourself."
   },
   {
     "name": "Yes, and...",
