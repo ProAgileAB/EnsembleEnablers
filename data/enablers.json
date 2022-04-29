@@ -134,8 +134,12 @@
   },
   {
     "name": "Yes, and...",
-    "symptoms": [],
-    "proposal": ""
+    "symptoms": [
+      "The new navigator starts undoing changes that the previous navigator made",
+      "The new navigator ignores the previous direction and pursues a different one",
+      "Someone comments that they can't wait until it's their turn to navigate because then\nwe'll start doing something useful"
+    ],
+    "proposal": "In improvisational theater, they have this rule. Say \"yes, and...\" to your fellow actors while\nyou perform together. It means you should accept whatever they give you, and build on it. If\nthe actors instead say \"No, but...\" and start in another direction entirely, it breaks the group\nflow - the actors know it will be a better performance if they support one another.\n\nThis is the kind of spirit we want to cultivate in the ensemble. Do not delete or undo what the\nprevious navigators did before you. Refactor but do not rewrite. Say ‘Yes, and' to whatever\nyour colleagues give you."
   },
   {
     "name": "Cross team ensemble",
