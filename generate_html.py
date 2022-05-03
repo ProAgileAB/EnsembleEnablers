@@ -19,6 +19,7 @@ HTML_PAGE = """<!doctype html>
         margin: 10px;
         border: 2px solid gray;
         border-radius: 20px 50px;
+        page-break-after: auto;
       }
     </style>
 </head>
