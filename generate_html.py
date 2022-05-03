@@ -12,8 +12,6 @@ HTML_PAGE = """<!doctype html>
     <style>
     body {
         background-color: lightblue;
-        border-radius: 10px;
-        border-style: 
     }
     .enabler {
         background-color: white;
