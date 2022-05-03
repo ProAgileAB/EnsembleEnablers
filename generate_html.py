@@ -19,7 +19,7 @@ HTML_PAGE = """<!doctype html>
         margin: 10px;
         border: 2px solid gray;
         border-radius: 20px 50px;
-        page-break-after: auto;
+        break-after: recto;
       }
     </style>
 </head>
@@ -43,7 +43,7 @@ def enabler_li(e):
 
 
 def html_content(enablers):
-    result = "<h1>Ensemble enablers</h1>\n<ul>\n"
+    result = "<h1>Ensemble enablers</h1>\n<ul style='page-break-after: always;'>\n"
     result += format_enablers(enablers, enabler_li)
     result += "</ul>\n"
     result += format_enablers(enablers, enabler_as_html)

@@ -146,5 +146,12 @@
     "aka": "What You Bring Is What You Solve (WYBIWYS)",
     "symptoms": [],
     "proposal": ""
+  },
+  {
+    "name": "Bring your problem, not your solution",
+    "symptoms": ["One person keeps having to navigate the current approach (low alignment)",
+    "One person takes over the goal discussion, and 'forces through' a solution idea",
+    "Low engagement in team, people feel the ensemble is pointless/meaningless/waste of time"],
+    "proposal": ""
   }
 ]
