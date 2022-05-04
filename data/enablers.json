@@ -153,5 +153,11 @@
     "One person takes over the goal discussion, and 'forces through' a solution idea",
     "Low engagement in team, people feel the ensemble is pointless/meaningless/waste of time"],
     "proposal": ""
+  },
+  {
+    "name": "Hands Off The Keyboard",
+    "symptoms": ["For any given task, the same person keeps 'becoming' navigator one way or the other",
+    "One person in the team has years and years more experience of the domain-code base-business than the others",
+    "It is really hard to let go of the keyboard for one person in the ensemble"]
   }
 ]
