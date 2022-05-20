@@ -26,6 +26,7 @@ HTML_PAGE = """<!doctype html>
 <body>
 %s
 </body>
+<a href="https://github.com/ProAgileAB/EnsembleEnablers">See a mistake or have an enabler to add? Pull-requests are welcome <3</a>
 </html>"""
 
 
