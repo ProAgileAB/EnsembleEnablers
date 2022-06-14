@@ -159,5 +159,11 @@
     "symptoms": ["For any given task, the same person keeps 'becoming' navigator one way or the other",
     "One person in the team has years and years more experience of the domain, code base and business than the others",
     "It is really hard to let go of the keyboard for one person in the ensemble"]
+  },
+  {
+    "name": "Collaborative goal writing",
+    "symptoms": ["Role switches are not smooth, confusion arises as to what is being worked on",
+    "The timer is stopped or ignored because discussions keep going on and on",
+    "Engagement and energy is dropping by the minute"]
   }
 ]
