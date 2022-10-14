@@ -1,5 +1,5 @@
 Scenario: someone in the team really likes coding in isolation, coming up with a solution-design-architecture
-on their own. And then brings that solution to the team - either as a pull request or as a sketch of a solution - it can become real frustration for the team when ensembling.
+on their own. And then brings that solution to the team - either as a pull request or as a sketch of a solution - it can become real frustration for an ensemble.
 
 What happens is that the problem-solving part is left out of the team effort. This means the ensemble-team becomes an execute only ensemble; not a learning team.
 
