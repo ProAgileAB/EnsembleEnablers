@@ -28,7 +28,7 @@ def load_enablers():
     path = ENABLERS_PATH
     text = path.read_text(encoding='utf8')
     raw_list = json.loads(text)
-    for enabler in raw_list:
+    for enabler in sorted(raw_list, key=lambda item: item['name']):
         proposal_path = Path(file_path_from_enabler_name(enabler['name']))
         print(f"Looking for {proposal_path}... ")
         if proposal_path.exists():
