@@ -48,7 +48,12 @@ def file_path_from_enabler_name(enabler_name):
 
 
 def id_from_name(enabler_name):
-    return enabler_name.lower().replace(' ', '-').replace('.', '').replace(',', '')
+    return (enabler_name
+            .lower()
+            .replace(' ', '-')
+            .replace('.', '')
+            .replace(',', '')
+            )
 
 
 def enabler_self_tests():

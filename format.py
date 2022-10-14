@@ -1,13 +1,13 @@
 from enabler import ENABLERS_PATH
 
-replace = {
+REPLACE_TO_FROM = {
     "'": ["’"],
     r"\"": ["“", "”"]
 }
 
 
 def format_text(text):
-    for new, olds in replace.items():
+    for new, olds in REPLACE_TO_FROM.items():
         for old in olds:
             text = text.replace(old, new)
     return text
