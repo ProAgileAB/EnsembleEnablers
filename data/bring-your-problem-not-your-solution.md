@@ -6,4 +6,4 @@ What happens is that the problem-solving part is left out of the team effort. Th
 Bringing a problem instead of a solution has several advantages: we don't miss out on getting more eyes on the design/solution/architecture, which often means a better solution, not only technically but also team-alignment-wise.
 It also leaves out the frustration of being code monkeys only.
 
-So this enabler suggests that you set you mind free of preconceived ideas and focusing those efforts on instead trying to formulate more clearly what problem you are trying to solve, and trust the team to do so.
+So this enabler suggests that you set your mind free of preconceived ideas and instead focus on trying to formulate more clearly what problem you are trying to solve, and trust the team to do so.
